@@ -33,10 +33,22 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void toastOnClick(View view) {
-        Toast.makeText(this,
-                       R.string.message_meow,
-                       Toast.LENGTH_SHORT).show();
+        EditText text = (EditText) findViewById(R.id.text_field03_main);
+        String data_to_sent = text.getText().toString();
+        data_to_sent =  data_to_sent+this.getString(R.string.message_meow) ;
+        Toast.makeText(this,data_to_sent,Toast.LENGTH_SHORT).show();
     }
+
+//    todo:combine openWebLink, toastOnClick and callSomeone, use parameter as the text field.
+    public void callSomeone(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        EditText text = (EditText) findViewById(R.id.text_field04_main);
+        String data_to_sent = text.getText().toString();
+        data_to_sent =  this.getString(R.string.prefix_tel) + data_to_sent;
+        intent.setData(Uri.parse(data_to_sent));
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

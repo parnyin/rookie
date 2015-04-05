@@ -10,15 +10,19 @@
     <string name="action_share">分享</string>
 
     <string name="button_send">发送</string>
-    <string name="button_toast_test">悄悄喵一声</string>
+    <string name="button_toast_test">萌化</string>
     <string name="button_enter_another_page">进入</string>
     <string name="button_open_in_browser">在浏览器中打开</string>
+    <string name="button_call_someone">马上拨打！</string>
+    <string name="button_click_me">点我</string>
 
     <string name="hint_enter_message">请在这里输入您想说的话。</string>
     <string name="hint_enter_weblink">请在这里输入您想要去的网址。</string>
+    <string name="hint_enter_phone_number">请在这里输入您想要拨打的电话号码。</string>
 
     <string name="weblink_baidu">www.baidu.com</string>
 
-    <string name="message_meow">喵~ ^_^</string>
+    <string name="message_meow">喵~ ∈)⌒_∩)☆～ </string>
     <string name="prefix_http">http://</string>
+    <string name="prefix_tel">tel:</string>
 </resources>

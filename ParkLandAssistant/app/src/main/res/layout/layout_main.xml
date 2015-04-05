@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -15,8 +15,8 @@
     <EditText
         android:id="@+id/text_field01_main"
         android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:hint="@string/hint_enter_message" />
 
     <Button
@@ -26,42 +26,46 @@
         android:text="@string/button_send"
         android:onClick="sendMessage" />
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/text_field02_main"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:hint="@string/hint_enter_weblink" />
 
-        <EditText
-            android:id="@+id/text_field02_main"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:hint="@string/hint_enter_weblink" />
+    <Button
+        android:id="@+id/button02_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_open_in_browser"
+        android:onClick="openWebLink" />
 
-        <Button
-            android:id="@+id/button03_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/text_field02_main"
-            android:layout_toRightOf="@id/text_field02_main"
-            android:text="@string/button_open_in_browser"
-            android:onClick="openWebLink" />
+    <EditText
+        android:id="@+id/text_field03_main"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:hint="@string/hint_enter_message" />
 
-        <EditText
-            android:id="@+id/text_field03_main"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text_field02_main"
-            android:hint="@string/hint_enter_message" />
+    <Button
+        android:id="@+id/button03_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_toast_test"
+        android:onClick="toastOnClick" />
 
-        <Button
-            android:id="@+id/button02_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/button03_main"
-            android:text="@string/button_toast_test"
-            android:onClick="toastOnClick" />
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/text_field04_main"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:hint="@string/hint_enter_phone_number" />
+
+    <Button
+        android:id="@+id/button04_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_call_someone"
+        android:onClick="callSomeone" />
+
 </LinearLayout>
