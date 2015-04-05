@@ -2,6 +2,7 @@
     <string name="label_app">二货喵</string>
     <string name="label_main_activity">二花猫探险队</string>
     <string name="label_display_message_activity">显示信息</string>
+    <string name="label_some_buttons_activity">按钮测试页</string>
 
     <string name="action_settings">设置</string>
     <string name="action_search">搜索</string>
@@ -10,8 +11,14 @@
 
     <string name="button_send">发送</string>
     <string name="button_toast_test">悄悄喵一声</string>
+    <string name="button_enter_another_page">进入</string>
+    <string name="button_open_in_browser">在浏览器中打开</string>
 
-    <string name="hint_edit">请在这里输入您想说的话。</string>
+    <string name="hint_enter_message">请在这里输入您想说的话。</string>
+    <string name="hint_enter_weblink">请在这里输入您想要去的网址。</string>
+
+    <string name="weblink_baidu">www.baidu.com</string>
 
     <string name="message_meow">喵~ ^_^</string>
+    <string name="prefix_http">http://</string>
 </resources>

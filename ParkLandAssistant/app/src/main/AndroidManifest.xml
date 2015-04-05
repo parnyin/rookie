@@ -9,6 +9,7 @@ package="com.mywholefamilymeow.parklandassistant" >
     android:icon="@mipmap/ic_launcher"
     android:label="@string/label_app"
     android:theme="@style/AppTheme" >
+
     <activity
         android:name=".MainActivity"
         android:label="@string/label_app" >
@@ -17,14 +18,15 @@ package="com.mywholefamilymeow.parklandassistant" >
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+
     <activity
         android:name=".DisplayMessageActivity"
-        android:label="@string/label_display_message_activity"
-        android:parentActivityName=".MainActivity" >
+        android:label="@string/label_display_message_activity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
     </activity>
+
 </application>
 
 </manifest>

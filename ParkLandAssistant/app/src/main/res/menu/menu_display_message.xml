@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="catplusplus.firstcat.DisplayMessageActivity">
 
-    <item android:id="@+id/action_share"
+    <item
+        android:id="@+id/action_share"
         android:icon="@drawable/ic_action_share"
         android:title="@string/action_share"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/action_settings"
+    <item
+        android:id="@+id/action_settings"
         android:icon="@drawable/ic_action_settings"
         android:title="@string/action_settings"
         app:showAsAction="ifRoom" />

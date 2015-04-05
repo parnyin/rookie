@@ -4,29 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:clickable="false"
-    android:orientation="horizontal">
+    android:clickable="false">
 
-<EditText android:id="@+id/edit_field"
-    android:layout_weight="1"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:hint="@string/hint_edit" />
+    <EditText
+        android:id="@+id/text_field01_main"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_enter_message" />
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/button_send"
-    android:onClick="sendMessage" />
+    <Button
+        android:id="@+id/button01_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage" />
 
-<Button android:id="@+id/button01_main"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/button_toast_test"
-    android:onClick="toastOnClick" />
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/text_field02_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="@string/hint_enter_weblink" />
+
+        <Button
+            android:id="@+id/button03_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/text_field02_main"
+            android:layout_toRightOf="@id/text_field02_main"
+            android:text="@string/button_open_in_browser"
+            android:onClick="openWebLink" />
+
+        <EditText
+            android:id="@+id/text_field03_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_field02_main"
+            android:hint="@string/hint_enter_message" />
+
+        <Button
+            android:id="@+id/button02_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button03_main"
+            android:text="@string/button_toast_test"
+            android:onClick="toastOnClick" />
+    </RelativeLayout>
 </LinearLayout>
