@@ -1,0 +1,17 @@
+<resources>
+    <string name="label_app">二货喵</string>
+    <string name="label_main_activity">二花猫探险队</string>
+    <string name="label_display_message_activity">显示信息</string>
+
+    <string name="action_settings">设置</string>
+    <string name="action_search">搜索</string>
+    <string name="action_add_pic">添加图片</string>
+    <string name="action_share">分享</string>
+
+    <string name="button_send">发送</string>
+    <string name="button_toast_test">悄悄喵一声</string>
+
+    <string name="hint_edit">请在这里输入您想说的话。</string>
+
+    <string name="message_meow">喵~ ^_^</string>
+</resources>
