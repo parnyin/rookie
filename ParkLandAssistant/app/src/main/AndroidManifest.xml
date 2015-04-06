@@ -20,8 +20,16 @@ package="com.mywholefamilymeow.parklandassistant" >
     </activity>
 
     <activity
-        android:name=".DisplayMessageActivity"
-        android:label="@string/label_display_message_activity">
+        android:name=".MessageForwardActivity"
+        android:label="@string/label_message_forward">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+    </activity>
+
+    <activity
+        android:name=".MessageBackwardActivity"
+        android:label="@string/label_message_backward">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
