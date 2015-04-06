@@ -1,5 +1,6 @@
 package com.mywholefamilymeow.parklandassistant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,16 +10,21 @@ import android.widget.TextView;
 
 public class MessageForwardActivity extends BaseActivity {
 
+    public static String PARAMETER1 = "Message from MainActivity";
+
+    public static void actionStart(Context context,String data1){
+        Intent intent = new Intent(context, MessageForwardActivity.class);
+        PARAMETER1 = data1;
+        context.startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.MESSAGE_TO_SENT);
-
         TextView textView = new TextView(this);
-        textView.setTextSize(14);
-        textView.setText(message);
+        textView.setTextSize(18);
+        textView.setText(PARAMETER1);
 
         setContentView(textView);
     }

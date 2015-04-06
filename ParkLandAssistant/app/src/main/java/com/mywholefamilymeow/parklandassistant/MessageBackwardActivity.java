@@ -25,7 +25,7 @@ public class MessageBackwardActivity extends BaseActivity {
                 EditText text = (EditText) findViewById(R.id.text_field01);
                 String data_to_sent = text.getText().toString();
                 intent.putExtra(MESSAGE_TO_RETURN,data_to_sent);
-                setResult(RESULT_OK,intent);
+                setResult(1,intent);
                 finish();
             }
         });
@@ -45,7 +45,7 @@ public class MessageBackwardActivity extends BaseActivity {
         EditText text = (EditText) findViewById(R.id.text_field01);
         String data_to_sent = text.getText().toString();
         intent.putExtra(MESSAGE_TO_RETURN,data_to_sent);
-        setResult(RESULT_OK,intent);
+        setResult(2,intent);
         finish();
 
     }

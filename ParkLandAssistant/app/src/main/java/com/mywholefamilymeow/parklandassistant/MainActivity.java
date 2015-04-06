@@ -14,28 +14,25 @@ import android.widget.Toast;
 public class MainActivity extends BaseActivity {
 
     public final static String TAG = "MainActivity";
-    public final static String MESSAGE_TO_SENT = "Message from MainActivity";
     public final static String MESSAGE_TO_RETURN = "Message from MessageBackwardActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        todo: remove the TAG and all the log.d(TAG) after understanding the life cycle.
+//        todo: remove the TAG and all the log.d(TAG) after COMPLETELY understanding the life cycle.
         Log.d(TAG,"onCreate");
         setContentView(R.layout.layout_main);
     }
 
     public void sendMessage(View view) {
-        Intent intent1 = new Intent(this, MessageBackwardActivity.class);
-        Intent intent2 = new Intent(this, MessageForwardActivity.class);
+        Intent intent = new Intent(this, MessageBackwardActivity.class);
         EditText text = (EditText) findViewById(R.id.text_field01);
         String data_to_sent = text.getText().toString();
         if (data_to_sent.equals("")) {
-            startActivityForResult(intent1, 1);
+            startActivityForResult(intent, 1);
         }
         else{
-        intent2.putExtra(MESSAGE_TO_SENT, data_to_sent);
-        startActivity(intent2);
+        MessageForwardActivity.actionStart(this,data_to_sent);
         }
     }
 
@@ -43,11 +40,19 @@ public class MainActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode){
             case 1:
-                if(resultCode==RESULT_OK){
-                    String returned_data = data.getStringExtra(MESSAGE_TO_RETURN);
-                    Toast.makeText(this,returned_data,Toast.LENGTH_SHORT).show();
-//                    todo: put returned_data into the text field?
+                String returned_data = data.getStringExtra(MESSAGE_TO_RETURN);
+                switch (resultCode){
+                    case 1:
+                        Toast.makeText(this,returned_data,Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        EditText text = (EditText) findViewById(R.id.text_field01);
+                        text.setText(returned_data);
+                        break;
+                    default:
                 }
+                break;
+            default:
         }
     }
 
